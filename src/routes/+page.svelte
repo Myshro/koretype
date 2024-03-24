@@ -331,7 +331,7 @@ function renderWordBlocks() {
 
         .learned {
             font-size: 1rem;
-            color: rgb(201, 205, 209)        }
+            color: rgb(148, 153, 158)        }
 
         .game-over * {
             animation: fade-in 0.5s;
