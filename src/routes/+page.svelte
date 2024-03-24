@@ -69,15 +69,15 @@
                     learnedVocabulary.push(englishAndKorean);
                     word = englishAndKorean["kr"];
                     englishWord = englishAndKorean["en"];
-                    // inputField.blur();
+                    inputField.blur();
                     inputField.focus();
                     resetTimer();
                     score++;
-                }, 1);
+                }, 4);
 
                 setTimeout(() => {
                     playerInput = "";
-                }, 2);
+                }, 5);
             } 
         }
 
@@ -122,55 +122,46 @@
 
             characters = [];
 
-// Set the gravity of the world.
-// Try changing the x and y components
-// to change the "falling" animation
-const gravity = new Two.Vector(0, 0.16);
+    const gravity = new Two.Vector(0, 0.16);
 
 
 
 
-// Add callbacks to events that Two.js triggers.
-two.bind('resize', resize);
-two.bind('update', update);
 
+    two.bind('resize', resize);
+    two.bind('update', update);
 
-// Set the position of the directions
-// to the center of the page.
-function resize() {
-  
-}
-
-// An update callback that is called every time
-// the scene is rendered. Think of this as an
-// animation loop.
-function update() {
-
-  // Iterate through all letters in the `characters`
-  // array, apply gravity to their velocity, and
-  // update their respective position.
-  for (let i = 0; i < characters.length; i++) {
-
-    const text = characters[i];
+    function resize() {
     
-    text.translation.addSelf(text.velocity);
-    text.rotation += text.velocity.r;
-    text.velocity.add(gravity);
-
-    // If the text's velocity is greater than 0
-    // and the position is off the page, then
-    // remove the text.
-    if (text.velocity.y > 200 && text.translation.y > two.height) {
-      two.scene.remove(text);
-      two.release(text);
-      characters.splice(i, 1);
     }
-  }
-}
-});
+
+    function update() {
+
+    // Iterate through all letters in the `characters`
+    // array, apply gravity to their velocity, and
+    // update their respective position.
+    for (let i = 0; i < characters.length; i++) {
+
+        const text = characters[i];
+        
+        text.translation.addSelf(text.velocity);
+        text.rotation += text.velocity.r;
+        text.velocity.add(gravity);
+
+        // If the text's velocity is greater than 0
+        // and the position is off the page, then
+        // remove the text.
+        if (text.velocity.y > 200 && text.translation.y > two.height) {
+        two.scene.remove(text);
+        two.release(text);
+        characters.splice(i, 1);
+        }
+    }
+    }
+    });
 
 // Utility function to render word blocks every 50ms
-function renderWordBlocks() {
+    function renderWordBlocks() {
     let index = 0; // Initialize index counter
   
     const renderInterval = setInterval(() => {
