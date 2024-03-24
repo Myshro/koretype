@@ -1,16 +1,16 @@
-# [Try it out here](https://byte-smith.vercel.app/)
+# [Try it out here](https://koretype.vercel.app/)
 ## Inspiration
-When our team was working with the bitwise CSO homework taught here at UVA, we noticed a significant lack of bitwise calculators that were flexible and easy to follow. So, we made this site for fellow students to show how bitwise expressions are evaluated step by step. 
+Learning to type in another language is hard. This was a relatable experience felt by many members of the team, so we wanted to create a lightweight, easy-to-use site that lets a user learn how to type and gain some vocabulary while doing so. We settled on Korean as the language to make this site for. The site is different from all we could find online in that you can type indefinitely, so long as you do not let the timer beat you. You can adjust the difficulty of the timer to fit your needs, sort of like a game.
 ## What it does
-The user can input any form of valid bitwise operations (i.e. (~3 + 4 << 2) & (1 ^ 5)) and the site will evaluate each expression in the correct order, and show the user each step in binary, hexadecimal, and decimal.
+The user is shown a randomly selected word from the most common 300 Korean words, and they must type it within a certain time limit to practice their typing skills. It teaches the user the English meaning of the word as well.
 ## How we built it
-We used SvelteKit and Vercel to host it, with Node.js to test stuff out before we had a front-end site.
+We used Svelte, SvelteKit, Vercel, and Node.js to test out stuff.
 ## Challenges we ran into
-Javascript in general was a difficult language to code in due to the lack of restrictions specifically with types. For example, one error we had was because the loop reference variable was a string as opposed to an integer. Another challenge we had was that we had to represent all numbers as 32-bit binary numbers which made conversions difficult.
+We used a small graphics library (two.js) to render the flying letters that come out when your game ends, but finding a library that would work with Svelte was quite a pain for some reason. Many of the graphics libraries did not render properly, and even getting two.js to work was a bit fidgety.
 ## Accomplishments that we're proud of
-We made a functional site that accomplishes what we set out to do from the start. We think the struggles we experienced in CSO could be alleviated by this site, and we hope future students can use this to help them in their future classes.
+We made a functional site that accomplishes what we set out to do from the start. The typing and UI turned out better than we expected.
 ## What we learned
-For most of us, we had never used Javascript or any front-end frameworks before. Working with everyone to make a functional site, and finding out efficient ways to split up tasks (i.e. people working on the front end vs. working on the logic of parsing an expression and running through it step by step). 
-## What's next for ByteSmith
-We want to add local storage to the site, and ways to change the maximum # of bits in each operation.  
+Javascript can sometimes be fidgety to work with, but it also has a huge ecosystem of plugins and plentiful information everywhere.
+## What's next for Koretype
+Adding local storage for high scores, accessing word lists / allowing users to use certain word lists, etc.
 
