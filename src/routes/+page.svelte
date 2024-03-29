@@ -73,11 +73,11 @@
                     inputField.focus();
                     resetTimer();
                     score++;
-                }, 4);
+                }, 2);
 
                 setTimeout(() => {
                     playerInput = "";
-                }, 5);
+                }, 2);
             } 
         }
 
